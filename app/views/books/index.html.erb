@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Books</h1>
+
+<%= link_to "New book", new_book_path %>
+
+<div id="books">
+  <% @books.each do |book| %>
+    <div>
+      <%= render book %>
+      <p>
+        <%= link_to "Show", book %> |
+        <%= link_to "Edit", edit_book_path(book) %> |
+        <%= link_to "Delete", delete_book_path(book) %>
+      </p>
+    </div>
+  <% end %>
+</div>
